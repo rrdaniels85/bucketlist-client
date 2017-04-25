@@ -12,14 +12,47 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <h1>iCarpe Diem - Bucket List Site </h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <!-- SIGN UP FORM -->
+      <form id="sign-up">
+      <fieldset>
+        <legend>Sign Up!</legend>
+          <input name="credentials[email]" type="text" id="sign-up-emai" placeholder="Email">
+          <input name="credentials[password]" type="password" id="sign-up-password" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" id="sign-up-password-confirmation" placeholder="Confirm Password">
+          <input type="submit" name="submit" value="Sign up!">
+      </fieldset>
+      </form>
+
+      <!-- SIGN IN FORM -->
+      <form id="sign-in">
+      <fieldset>
+        <legend>Sign in!</legend>
+          <input name="credentials[email]" type="text" id="sign-in-email" placeholder="Email">
+          <input name="credentials[password]" type="password" id="sign-in-password" placeholder="Password">
+          <input type="submit" name="submit" value="Sign in!">
+      </fieldset>
+      </form>
+
+              <!-- CHANGE PASSWORD FORM -->
+              <form id="change-password">
+              <fieldset>
+                <legend>Change Password</legend>
+                <input type='password' name='passwords[old]' id ='old-password' placeholder='Old Password'>
+                <input type='password' name='passwords[new]' id ='new-password' placeholder='New Password'>
+                <input type="submit" name="submit" value="Change Password">
+            </fieldset>
+            </form>
+
+            <!-- SIGN OUT FORM -->
+            <form id="sign-out">
+              <fieldset>
+                <legend>Sign Out</legend>
+                <input type="submit" name="submit" value="Sign out!">
+              </fieldset>
+            </form>
+
+
     </body>
 </html>
