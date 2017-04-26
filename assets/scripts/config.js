@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://icarpediem.herokuapp.com'
+    production: 'https://icarpediem.herokuapp.com/'
   }
 }
 
