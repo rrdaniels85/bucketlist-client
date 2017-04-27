@@ -24,7 +24,18 @@ const getGoals = () => {
   })
 }
 
+const deleteGoal = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/goals/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createGoal,
-  getGoals
+  getGoals,
+  deleteGoal
 }

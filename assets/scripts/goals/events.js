@@ -23,13 +23,23 @@ const onGetGoals = function (event) {
     .catch(ui.getGoalsFailure)
 }
 
+const onDeleteGoal = function () {
+  event.preventDefault()
+  let data = $(this).parent().prev().attr('data-id')
+  api.deleteGoal(data)
+    .then(ui.deleteGoalSuccess)
+    .catch(ui.deleteGoalFailure)
+}
+
 const goalHandlers = () => {
   $('#create-goal').on('submit', onCreateGoal)
   $('.get-goals').on('click', onGetGoals)
+  $(document).on('click', '.remove', onDeleteGoal)
 }
 
 module.exports = {
   goalHandlers,
   onCreateGoal,
-  onGetGoals
+  onGetGoals,
+  onDeleteGoal
 }

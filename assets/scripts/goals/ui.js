@@ -20,9 +20,19 @@ const getGoalsFailure = (error) => {
   console.error(error)
 }
 
+const deleteGoalSuccess = (data) => {
+  console.log('you successfully deleted that goal')
+}
+
+const deleteGoalFailure = (error) => {
+  console.error(error)
+}
+
 module.exports = {
   createGoalSuccess,
   createGoalFailure,
   getGoalsSuccess,
-  getGoalsFailure
+  getGoalsFailure,
+  deleteGoalSuccess,
+  deleteGoalFailure
 }
