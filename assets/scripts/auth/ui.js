@@ -1,5 +1,5 @@
 'use strict'
-const store = require('../scripts/store.js')
+const store = require('../store.js')
 
 const signUpSuccess = (data) => {
   console.log('sign up success ran')

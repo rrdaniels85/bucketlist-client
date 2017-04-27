@@ -1,5 +1,5 @@
 'use strict'
-const store = require('../scripts/store.js')
+const store = require('../store.js')
 
 const createGoalSuccess = (data) => {
   console.log('you successfully created a goal')
