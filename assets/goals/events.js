@@ -9,6 +9,7 @@ const onCreateGoal = function (event) {
   event.preventDefault()
   console.log('this click worked')
   const data = getFormFields(this)
+  console.log(data)
   api.createGoal(data)
     .then(ui.createGoalSuccess)
     .catch(ui.createGoalFailure)
