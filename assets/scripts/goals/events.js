@@ -7,7 +7,7 @@ const ui = require('./ui')
 
 const onCreateGoal = function (event) {
   event.preventDefault()
-  console.log('this click worked')
+  console.log('create goals was clicked!')
   const data = getFormFields(this)
   console.log(data)
   api.createGoal(data)
@@ -15,10 +15,21 @@ const onCreateGoal = function (event) {
     .catch(ui.createGoalFailure)
 }
 
+const onGetGoals = function (event) {
+  event.preventDefault()
+  console.log('get goals was clicked!')
+  api.getGoals()
+    .then(ui.getGoalsSuccess)
+    .catch(ui.getGoalsFailure)
+}
+
 const goalHandlers = () => {
   $('#create-goal').on('submit', onCreateGoal)
+  $('.get-goals').on('click', onGetGoals)
 }
 
 module.exports = {
-  goalHandlers
+  goalHandlers,
+  onCreateGoal,
+  onGetGoals
 }

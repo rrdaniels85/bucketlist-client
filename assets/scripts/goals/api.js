@@ -14,6 +14,17 @@ const createGoal = (data) => {
   })
 }
 
+const getGoals = () => {
+  return $.ajax({
+    url: config.apiOrigin + '/goals',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  createGoal
+  createGoal,
+  getGoals
 }

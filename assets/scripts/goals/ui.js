@@ -9,7 +9,17 @@ const createGoalFailure = (error) => {
   console.error(error)
 }
 
+const getGoalsSuccess = (data) => {
+  console.log(data)
+}
+
+const getGoalsFailure = (error) => {
+  console.error(error)
+}
+
 module.exports = {
   createGoalSuccess,
-  createGoalFailure
+  createGoalFailure,
+  getGoalsSuccess,
+  getGoalsFailure
 }
