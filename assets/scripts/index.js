@@ -14,8 +14,10 @@ $(() => {
 require('./example')
 
 const authEvents = require('../../assets/auth/events.js')
+const goalEvents = require('../../assets/goals/events.js')
 
 // On document ready
 $(() => {
   authEvents.addHandlers()
+  goalEvents.goalHandlers()
 })

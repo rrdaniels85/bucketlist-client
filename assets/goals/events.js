@@ -7,6 +7,7 @@ const ui = require('./ui')
 
 const onCreateGoal = function (event) {
   event.preventDefault()
+  console.log('this click worked')
   const data = getFormFields(this)
   api.createGoal(data)
     .then(ui.createGoalSuccess)
