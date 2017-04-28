@@ -21,11 +21,22 @@ const getGoalsFailure = (error) => {
 }
 
 const deleteGoalSuccess = (data) => {
+  console.log(data)
+  $('#removegoalmodal' + data).modal('toggle')
   console.log('you successfully deleted that goal')
-  $(this).delete()
 }
 
 const deleteGoalFailure = (error) => {
+  console.error(error)
+}
+
+const updateGoalSuccess = (data) => {
+  console.log(data)
+  $('#updategoalmodal' + data).modal('toggle')
+  console.log('you successfully updated that goal')
+}
+
+const updateGoalFailure = (error) => {
   console.error(error)
 }
 
@@ -35,5 +46,7 @@ module.exports = {
   getGoalsSuccess,
   getGoalsFailure,
   deleteGoalSuccess,
-  deleteGoalFailure
+  deleteGoalFailure,
+  updateGoalSuccess,
+  updateGoalFailure
 }

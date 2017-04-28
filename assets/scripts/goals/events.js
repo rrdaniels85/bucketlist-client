@@ -25,9 +25,9 @@ const onGetGoals = function (event) {
 
 const onDeleteGoal = function () {
   event.preventDefault()
-  let data = $(this).parent().prev().attr('data-id')
+  let data = $(this).attr('data-id')
   api.deleteGoal(data)
-    .then(ui.deleteGoalSuccess)
+    .then(ui.deleteGoalSuccess(data))
     .catch(ui.deleteGoalFailure)
 }
 
@@ -39,14 +39,14 @@ const onUpdateGoal = function (event) {
   let goalId = $(this).attr('data-id')
   console.log(goalId)
   api.updateGoal(goalId, data)
-    .then(ui.updateGoalSuccess)
+    .then(ui.updateGoalSuccess(goalId))
     .catch(ui.updateGoalFailure)
 }
 
 const goalHandlers = () => {
   $('#create-goal').on('submit', onCreateGoal)
   $('.get-goals').on('click', onGetGoals)
-  $(document).on('click', '.remove', onDeleteGoal)
+  $(document).on('submit', '.remove-goal', onDeleteGoal)
   $(document).on('submit', '.update-goal', onUpdateGoal)
 }
 

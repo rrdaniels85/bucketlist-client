@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Bucket List</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags unless you know what you are doing -->
@@ -12,9 +12,40 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>iCarpe Diem - Bucket List Site </h1>
 
-      <!-- SIGN UP FORM -->
+      <!-- NAV BAR -->
+      <div class="container-fluid navbar navbar-default navbar-static-top">
+      <h1 class="navbar brand">iCarpe Diem - Bucket List Site </h1>
+    </div>
+
+    <!-- Homepage banner -->
+    <div class="row well">
+      <div class="col-md-6">
+        <h2>Live out your dreams</h2>
+        <button type="button modalbutton" class="btn btn-default" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+        <button type="button modalbutton" class="btn btn-primary" data-toggle="modal" data-target="#signinmodal">Sign In</button>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="row text-center">
+    <div class="col-md-8">
+      <h3>About iCarpe Diem</h3>
+      <p>We want to encourage the world to follow their dreams,
+        write their goals, and work to accomplish them.
+      </p>
+    </div>
+    </div>
+
+
+      <!-- SIGN UP MODAL -->
+      <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Begin Building Your List - Sign Up!</h5>
+      </div>
+      <div class="modal-body">
       <form id="sign-up">
       <fieldset>
         <legend>Sign Up!</legend>
@@ -24,8 +55,23 @@
           <input type="submit" name="submit" value="Sign up!">
       </fieldset>
       </form>
+    </div>
+<div class="modal-footer">
+  <div class="signuperror"></div>
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- SIGN IN FORM -->
+      <!-- SIGN IN MODAL -->
+      <div class="modal fade" id="signinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sign In!</h5>
+      </div>
+      <div class="modal-body">
       <form id="sign-in">
       <fieldset>
         <legend>Sign in!</legend>
@@ -34,6 +80,14 @@
           <input type="submit" name="submit" value="Sign in!">
       </fieldset>
       </form>
+    </div>
+<div class="modal-footer">
+<div class="signinerror"></div>
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div>
 
               <!-- CHANGE PASSWORD FORM -->
               <form id="change-password">
@@ -53,16 +107,50 @@
               </fieldset>
             </form>
 
-<!-- ADD GOAL -->
+
+            <!-- ADD GOAL BUTTON -->
+
+            <div class="text-center">
+              <button type="button" class="btn btn-primary loginbuttons hidingbuttons" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
+                Add Bucketlist Item
+              </button>
+            </div>
+
+  <!-- ADD GOAL -->
+            <div class="modal fade" id="addgoalmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add a Bucketlist Item</h5>
+                </div>
+                <div class="modal-body">
             <form id="create-goal">
             <fieldset>
               <legend>Create Bucketlist Item</legend>
-                <input name="goal[description]" type="text" id="create-goal-description" placeholder="Description">
-                <input name="goal[category]" type="text" id="create-goal-category" placeholder="Category">
-                <input name="goal[status]" type="text" id="create-goal-status" placeholder="Status">
+              <label for="description">Description</label>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description">
+                <label for="category">Category</label>
+                <select name="goal[category]">
+                  <option value="Travel">Travel</option>
+                  <option value="Skill">Skill</option>
+                  <option value="Fitness">Fitness</option>
+                </select>
+                <label for="status">Status</label>
+                <select name="goal[status]">
+                  <option value="Not started">Not started</option>
+                  <option value="In progress">In progress</option>
+                  <option value="Completed">Completed</option>
+                </select>
                 <input type="submit" name="submit" value="Submit List Item">
             </fieldset>
             </form>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
             <!-- SEE GOALS -->
             <div class="read-goals">
@@ -71,6 +159,8 @@
               </button>
               <p class="listing-goals"></p>
             </div>
+
+            <!-- <input name="goal[category]" type="text" id="create-goal-category" placeholder="Category"> -->
 
     </body>
 </html>
