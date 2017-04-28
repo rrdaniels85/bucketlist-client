@@ -39,7 +39,7 @@ const onUpdateGoal = function (event) {
   let goalId = $(this).attr('data-id')
   console.log(goalId)
   api.updateGoal(goalId, data)
-    .then(ui.updateGoalSuccess)
+    .then(ui.updateGoalSuccess(goalId))
     .catch(ui.updateGoalFailure)
 }
 
