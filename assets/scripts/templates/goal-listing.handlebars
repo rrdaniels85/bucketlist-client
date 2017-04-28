@@ -10,7 +10,7 @@
         <li data-id="{{goal.id}}">Status: {{goal.status}}</li>
         <li>
           <button type="button" class="update" data-toggle="modal" data-target="#updategoalmodal{{goal.id}}">Update</button>
-          <button type="button" class="remove">Remove</button>
+          <button type="button" class="remove" data-toggle="modal" data-target="#removegoalmodal{{goal.id}}">Remove</button>
         </li>
       </ul>
       <div class="modal fade" id="updategoalmodal{{goal.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -28,6 +28,28 @@
                 <input data-id="{{goal.id}}" type="submit" name="submit" value="Update List Item">
             </fieldset>
             </form>
+            </div>
+            <div class="modal-footer">
+              <div class="passworderror"></div>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="removegoalmodal{{goal.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Are you sure you want to remove item?</h5>
+            </div>
+            <div class="modal-body">
+              <form class="remove-goal" data-id="{{goal.id}}">
+                <fieldset>
+                  <div class="remove-goal-check">{{goal.description}}</div>
+                  <input type="submit" name="submit" value="Remove List Item">
+                </fieldset>
+              </form>
             </div>
             <div class="modal-footer">
               <div class="passworderror"></div>

@@ -22,7 +22,6 @@ const getGoalsFailure = (error) => {
 
 const deleteGoalSuccess = (data) => {
   console.log('you successfully deleted that goal')
-  $(this).delete()
 }
 
 const deleteGoalFailure = (error) => {
