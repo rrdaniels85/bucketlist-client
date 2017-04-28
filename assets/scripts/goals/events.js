@@ -31,15 +31,29 @@ const onDeleteGoal = function () {
     .catch(ui.deleteGoalFailure)
 }
 
+const onUpdateGoal = function (event) {
+  event.preventDefault()
+  console.log('this update button works')
+  const data = getFormFields(this)
+  console.log(this)
+  let goalId = $(this).attr('data-id')
+  console.log(goalId)
+  api.updateGoal(goalId, data)
+    .then(ui.updateGoalSuccess)
+    .catch(ui.updateGoalFailure)
+}
+
 const goalHandlers = () => {
   $('#create-goal').on('submit', onCreateGoal)
   $('.get-goals').on('click', onGetGoals)
   $(document).on('click', '.remove', onDeleteGoal)
+  $(document).on('submit', '.update-goal', onUpdateGoal)
 }
 
 module.exports = {
   goalHandlers,
   onCreateGoal,
   onGetGoals,
-  onDeleteGoal
+  onDeleteGoal,
+  onUpdateGoal
 }
