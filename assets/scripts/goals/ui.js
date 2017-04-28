@@ -1,6 +1,7 @@
 'use strict'
 const store = require('../store.js')
 const showGoalsTemplate = require('../templates/goal-listing.handlebars')
+const api = require('./api.js')
 
 const createGoalSuccess = (data) => {
   console.log('you successfully created a goal')
@@ -13,7 +14,7 @@ const createGoalFailure = (error) => {
 const getGoalsSuccess = (data) => {
   console.log(data)
   let showGoalsHtml = showGoalsTemplate({ goals: data.goals })
-  $('.listing-goals').append(showGoalsHtml)
+  $('#content').append(showGoalsHtml)
 }
 
 const getGoalsFailure = (error) => {
@@ -23,7 +24,7 @@ const getGoalsFailure = (error) => {
 const deleteGoalSuccess = (data) => {
   console.log(data)
   $('#removegoalmodal' + data).modal('toggle')
-  $('.listing-goals').empty()
+  $('#content').empty()
   // $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
   console.log('you successfully deleted that goal')

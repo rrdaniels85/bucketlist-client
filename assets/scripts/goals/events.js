@@ -27,8 +27,14 @@ const onDeleteGoal = function () {
   event.preventDefault()
   let data = $(this).attr('data-id')
   api.deleteGoal(data)
-    .then(ui.deleteGoalSuccess(data))
+    .done(ui.deleteGoalSuccess, getGoals)
     .catch(ui.deleteGoalFailure)
+}
+
+const getGoals = function(){
+  api.getGoals()
+    .then(ui.getGoalsSuccess)
+    .catch(ui.getGoalsFailure)
 }
 
 const onUpdateGoal = function (event) {
@@ -55,5 +61,6 @@ module.exports = {
   onCreateGoal,
   onGetGoals,
   onDeleteGoal,
-  onUpdateGoal
+  onUpdateGoal,
+  getGoals
 }
