@@ -1,5 +1,8 @@
 'use strict'
 const store = require('../store.js')
+const goalapi = require('../goals/api.js')
+const goalui = require('../goals/ui.js')
+const goalevents = require('../goals/events.js')
 
 const signUpSuccess = (data) => {
   console.log('sign up success ran')
@@ -14,6 +17,9 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   store.user = data.user
   console.log(store)
+  goalapi.getGoals()
+    .then(goalui.getGoalsSuccess)
+    .catch(goalui.getGoalsFailure)
 }
 
 const signInFailure = (error) => {

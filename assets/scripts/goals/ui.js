@@ -26,6 +26,7 @@ const deleteGoalSuccess = (data) => {
   $('#removegoalmodal' + data).modal('toggle')
   $('#content').empty()
   // $('body').removeClass('modal-open')
+  $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
   console.log('you successfully deleted that goal')
 }
