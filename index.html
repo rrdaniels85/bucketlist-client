@@ -38,8 +38,6 @@
     </div>
 
 
-
-
       <!-- SIGN UP FORM -->
       <form id="sign-up">
       <fieldset>
@@ -79,7 +77,23 @@
               </fieldset>
             </form>
 
-            <!-- ADD GOAL -->
+
+            <!-- ADD GOAL BUTTON -->
+
+            <div class="text-center">
+              <button type="button" class="btn btn-primary loginbuttons hidingbuttons" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
+                Add Bucketlist Item
+              </button>
+            </div>
+
+  <!-- ADD GOAL -->
+            <div class="modal fade" id="addgoalmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add a Bucketlist Item</h5>
+                </div>
+                <div class="modal-body">
             <form id="create-goal">
             <fieldset>
               <legend>Create Bucketlist Item</legend>
@@ -100,6 +114,13 @@
                 <input type="submit" name="submit" value="Submit List Item">
             </fieldset>
             </form>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
             <!-- SEE GOALS -->
             <div class="read-goals">
