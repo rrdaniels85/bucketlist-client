@@ -53,6 +53,24 @@
               </fieldset>
             </form>
 
+<!-- ADD GOAL -->
+            <form id="create-goal">
+            <fieldset>
+              <legend>Create Bucketlist Item</legend>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="Description">
+                <input name="goal[category]" type="text" id="create-goal-category" placeholder="Category">
+                <input name="goal[status]" type="text" id="create-goal-status" placeholder="Status">
+                <input type="submit" name="submit" value="Submit List Item">
+            </fieldset>
+            </form>
+
+            <!-- SEE GOALS -->
+            <div class="read-goals">
+            <button type="button" class="get-goals">
+                See Bucketlist Items
+              </button>
+              <p class="listing-goals"></p>
+            </div>
 
     </body>
 </html>
