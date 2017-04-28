@@ -23,7 +23,15 @@ const getGoalsFailure = (error) => {
 const deleteGoalSuccess = (data) => {
   console.log(data)
   $('#removegoalmodal' + data).modal('toggle')
+  $('.listing-goals').empty()
+  // $('body').removeClass('modal-open')
+  $('.modal-backdrop').remove()
   console.log('you successfully deleted that goal')
+}
+
+const reRenderPage = (data) => {
+  console.log(data)
+  $('.listing-goals').empty()
 }
 
 const deleteGoalFailure = (error) => {
@@ -48,5 +56,6 @@ module.exports = {
   deleteGoalSuccess,
   deleteGoalFailure,
   updateGoalSuccess,
-  updateGoalFailure
+  updateGoalFailure,
+  reRenderPage
 }
