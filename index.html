@@ -22,8 +22,8 @@
     <div class="row well">
       <div class="col-md-6">
         <h2>Live out your dreams</h2>
-        <button type='button' class='btn btn-lg btn-default'>Sign Up</button>
-        <button type='button' class='btn btn-lg btn-primary'>Sign In</button>
+        <button type="button modalbutton" class="btn btn-default" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+        <button type="button modalbutton" class="btn btn-primary" data-toggle="modal" data-target="#signinmodal">Sign In</button>
       </div>
     </div>
 
@@ -38,7 +38,14 @@
     </div>
 
 
-      <!-- SIGN UP FORM -->
+      <!-- SIGN UP MODAL -->
+      <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Begin Building Your List - Sign Up!</h5>
+      </div>
+      <div class="modal-body">
       <form id="sign-up">
       <fieldset>
         <legend>Sign Up!</legend>
@@ -48,8 +55,23 @@
           <input type="submit" name="submit" value="Sign up!">
       </fieldset>
       </form>
+    </div>
+<div class="modal-footer">
+  <div class="signuperror"></div>
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div>
 
-      <!-- SIGN IN FORM -->
+      <!-- SIGN IN MODAL -->
+      <div class="modal fade" id="signinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sign In!</h5>
+      </div>
+      <div class="modal-body">
       <form id="sign-in">
       <fieldset>
         <legend>Sign in!</legend>
@@ -58,6 +80,14 @@
           <input type="submit" name="submit" value="Sign in!">
       </fieldset>
       </form>
+    </div>
+<div class="modal-footer">
+<div class="signinerror"></div>
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div>
 
               <!-- CHANGE PASSWORD FORM -->
               <form id="change-password">
