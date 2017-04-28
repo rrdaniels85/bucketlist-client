@@ -21,6 +21,8 @@ const getGoalsFailure = (error) => {
 }
 
 const deleteGoalSuccess = (data) => {
+  console.log(data)
+  $('#removegoalmodal' + data).modal('toggle')
   console.log('you successfully deleted that goal')
 }
 

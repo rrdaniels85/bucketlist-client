@@ -27,7 +27,7 @@ const onDeleteGoal = function () {
   event.preventDefault()
   let data = $(this).attr('data-id')
   api.deleteGoal(data)
-    .then(ui.deleteGoalSuccess)
+    .then(ui.deleteGoalSuccess(data))
     .catch(ui.deleteGoalFailure)
 }
 
