@@ -17,6 +17,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   store.user = data.user
   console.log(store)
+  $('.sign-in-view').addClass('hidden')
   goalapi.getGoals()
     .then(goalui.getGoalsSuccess)
     .catch(goalui.getGoalsFailure)
@@ -33,6 +34,7 @@ const signOutSuccess = () => {
   // $('body').removeClass('modal-open')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
+  $('.sign-in-view').removeClass('hidden')
 }
 
 const signOutFailure = (error) => {
