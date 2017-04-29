@@ -29,6 +29,10 @@ const signInFailure = (error) => {
 const signOutSuccess = () => {
   store.user = null
   console.log(store)
+  $('#content').empty()
+  // $('body').removeClass('modal-open')
+  $('body').removeClass('modal-open')
+  $('.modal-backdrop').remove()
 }
 
 const signOutFailure = (error) => {
