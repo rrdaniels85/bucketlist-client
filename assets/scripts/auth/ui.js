@@ -7,6 +7,8 @@ const goalevents = require('../goals/events.js')
 const signUpSuccess = (data) => {
   console.log('sign up success ran')
   store.user = data.user
+  $('#signupmodal').modal('toggle')
+  $('#signinmodal').modal('toggle')
   console.log(store)
 }
 
@@ -18,6 +20,7 @@ const signInSuccess = (data) => {
   store.user = data.user
   console.log(store)
   $('.sign-in-view').addClass('hidden')
+  $('#signinmodal').modal('toggle')
   goalapi.getGoals()
     .then(goalui.getGoalsSuccess)
     .catch(goalui.getGoalsFailure)
@@ -30,6 +33,7 @@ const signInFailure = (error) => {
 const signOutSuccess = () => {
   store.user = null
   console.log(store)
+  $('#signoutmodal').modal('toggle')
   $('#content').empty()
   // $('body').removeClass('modal-open')
   $('body').removeClass('modal-open')
@@ -43,6 +47,8 @@ const signOutFailure = (error) => {
 
 const changePasswordSuccess = () => {
   console.log('Password Successfully Changed.')
+  $('#newpasswordmodal').modal('toggle')
+
 }
 
 const changePasswordFailure = (error) => {
