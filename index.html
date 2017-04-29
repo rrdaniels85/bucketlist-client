@@ -89,23 +89,64 @@
 </div>
 </div>
 
-              <!-- CHANGE PASSWORD FORM -->
-              <form id="change-password">
-              <fieldset>
-                <legend>Change Password</legend>
-                <input type='password' name='passwords[old]' id ='old-password' placeholder='Old Password'>
-                <input type='password' name='passwords[new]' id ='new-password' placeholder='New Password'>
-                <input type="submit" name="submit" value="Change Password">
-            </fieldset>
-            </form>
 
-            <!-- SIGN OUT FORM -->
-            <form id="sign-out">
-              <fieldset>
-                <legend>Sign Out</legend>
-                <input type="submit" name="submit" value="Sign out!">
-              </fieldset>
-            </form>
+<!-- CHANGE PASSWORD modal button -->
+      <div class="text-center">
+        <button type="button" class="btn btn-primary" id="passwordbutton" data-toggle="modal" data-target="#newpasswordmodal">
+          Change Password
+        </button>
+      </div>
+
+    <!-- CHANGE PASSWORD Modal -->
+    <div class="modal fade" id="newpasswordmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Change Your Password</h5>
+          </div>
+          <div class="modal-body">
+            <form id="change-password">
+            <fieldset>
+              <input type='password' name='passwords[old]' id ='old-password' placeholder='Old Password'>
+              <input type='password' name='passwords[new]' id ='new-password' placeholder='New Password'>
+              <input type="submit" name="submit" value="Change Password">
+          </fieldset>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <div class="passworderror"></div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN OUT modal button -->
+  <div class="text-center">
+      <button type="button" class="btn btn-primary" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
+        Sign Out
+      </button>
+    </div>
+  <!-- SIGN OUT Modal -->
+  <div class="modal fade" id="signoutmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Are you sure you want to leave?</h5>
+        </div>
+        <div class="modal-body">
+          <form id="sign-out">
+            <fieldset>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
             <!-- ADD GOAL BUTTON -->
