@@ -11,7 +11,7 @@ const onCreateGoal = function (event) {
   const data = getFormFields(this)
   console.log(data)
   api.createGoal(data)
-    .then(ui.createGoalSuccess)
+    .done(ui.createGoalSuccess, getGoals)
     .catch(ui.createGoalFailure)
 }
 

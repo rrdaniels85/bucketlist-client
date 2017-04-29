@@ -5,6 +5,10 @@ const api = require('./api.js')
 
 const createGoalSuccess = (data) => {
   console.log('you successfully created a goal')
+  $('#content').empty()
+  // $('body').removeClass('modal-open')
+  $('body').removeClass('modal-open')
+  $('.modal-backdrop').remove()
 }
 
 const createGoalFailure = (error) => {
