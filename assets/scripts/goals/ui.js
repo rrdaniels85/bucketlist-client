@@ -4,6 +4,7 @@ const showGoalsTemplate = require('../templates/goal-listing.handlebars')
 const api = require('./api.js')
 
 const createGoalSuccess = (data) => {
+  $('#addgoalmodal').modal('toggle')
   console.log('you successfully created a goal')
   $('#content').empty()
   // $('body').removeClass('modal-open')
