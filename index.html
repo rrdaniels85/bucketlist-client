@@ -16,6 +16,12 @@
       <!-- NAV BAR -->
       <div class="container-fluid navbar navbar-default navbar-static-top">
       <h1 class="navbar brand">iCarpe Diem - Bucket List Site </h1>
+      <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
+        Sign Out
+      </button>
+        <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="passwordbutton" data-toggle="modal" data-target="#newpasswordmodal">
+          Change Password
+        </button>
     </div>
 
     <!-- Homepage banner -->
@@ -23,8 +29,8 @@
     <div class="row well">
       <div class="col-md-6">
         <h2>Live out your dreams</h2>
-        <button type="button modalbutton" class="btn btn-default" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
-        <button type="button modalbutton" class="btn btn-primary" data-toggle="modal" data-target="#signinmodal">Sign In</button>
+        <button type="button modalbutton" class="btn btn-default loginbuttons" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+        <button type="button modalbutton" class="btn btn-primary loginbuttons" data-toggle="modal" data-target="#signinmodal">Sign In</button>
       </div>
     </div>
 
@@ -93,11 +99,11 @@
 
 
 <!-- CHANGE PASSWORD modal button -->
-      <div class="text-center">
+      <!-- <div class="text-center">
         <button type="button" class="btn btn-primary" id="passwordbutton" data-toggle="modal" data-target="#newpasswordmodal">
           Change Password
         </button>
-      </div>
+      </div> -->
 
     <!-- CHANGE PASSWORD Modal -->
     <div class="modal fade" id="newpasswordmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -124,11 +130,11 @@
     </div>
 
     <!-- SIGN OUT modal button -->
-  <div class="text-center">
+  <!-- <div class="text-center">
       <button type="button" class="btn btn-primary" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
         Sign Out
       </button>
-    </div>
+    </div> -->
   <!-- SIGN OUT Modal -->
   <div class="modal fade" id="signoutmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -154,7 +160,7 @@
             <!-- ADD GOAL BUTTON -->
 
             <div class="text-center">
-              <button type="button" class="btn btn-primary loginbuttons hidingbuttons" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
+              <button type="button" class="btn btn-primary afterlogin hidden" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
                 Add Bucketlist Item
               </button>
             </div>

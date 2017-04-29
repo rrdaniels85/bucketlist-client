@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
   store.user = data.user
   console.log(store)
   $('.sign-in-view').addClass('hidden')
+  $('.afterlogin').removeClass('hidden')
   $('#signinmodal').modal('toggle')
   goalapi.getGoals()
     .then(goalui.getGoalsSuccess)
@@ -39,6 +40,7 @@ const signOutSuccess = () => {
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
   $('.sign-in-view').removeClass('hidden')
+  $('.afterlogin').addClass('hidden')
 }
 
 const signOutFailure = (error) => {
@@ -48,7 +50,6 @@ const signOutFailure = (error) => {
 const changePasswordSuccess = () => {
   console.log('Password Successfully Changed.')
   $('#newpasswordmodal').modal('toggle')
-
 }
 
 const changePasswordFailure = (error) => {
