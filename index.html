@@ -214,19 +214,11 @@
             <fieldset>
               <legend>Create Bucketlist Item</legend>
               <label for="description">Description</label>
-                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description">
-                <label for="category">Category</label>
-                <select name="goal[category]">
-                  <option value="Travel">Travel</option>
-                  <option value="Skill">Skill</option>
-                  <option value="Fitness">Fitness</option>
-                </select>
-                <label for="status">Status</label>
-                <select name="goal[status]">
-                  <option value="Not started">Not started</option>
-                  <option value="In progress">In progress</option>
-                  <option value="Completed">Completed</option>
-                </select>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description" required>
+              <label for="category">Category</label>
+                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category" required>
+              <label for="status">Status</label>
+                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status" required>
                 <input type="submit" name="submit" value="Submit List Item">
             </fieldset>
             </form>
