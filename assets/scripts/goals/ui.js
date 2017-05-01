@@ -19,9 +19,8 @@ const createGoalFailure = (error) => {
 const getGoalsSuccess = (data) => {
   console.log(data)
   data.goals.sort(function (a, b) {
-    return parseFloat(a.id) - parseFloat(b.id)
+    return parseFloat(b.id) - parseFloat(a.id)
   })
-  console.log("this is" + data.goals)
   let showGoalsHtml = showGoalsTemplate({ goals: data.goals })
   $('#content').append(showGoalsHtml)
 }
