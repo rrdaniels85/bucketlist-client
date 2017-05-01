@@ -11,7 +11,7 @@ const onCreateGoal = function (event) {
   const data = getFormFields(this)
   console.log(data)
   api.createGoal(data)
-    .then(ui.createGoalSuccess)
+    .done(ui.createGoalSuccess, getGoals)
     .catch(ui.createGoalFailure)
 }
 
@@ -27,19 +27,25 @@ const onDeleteGoal = function () {
   event.preventDefault()
   let data = $(this).attr('data-id')
   api.deleteGoal(data)
-    .then(ui.deleteGoalSuccess(data))
+    .done(ui.deleteGoalSuccess, getGoals)
     .catch(ui.deleteGoalFailure)
+}
+
+const getGoals = function(){
+  api.getGoals()
+    .then(ui.getGoalsSuccess)
+    .catch(ui.getGoalsFailure)
 }
 
 const onUpdateGoal = function (event) {
   event.preventDefault()
   console.log('this update button works')
   const data = getFormFields(this)
-  console.log(this)
+  console.log(data)
   let goalId = $(this).attr('data-id')
   console.log(goalId)
   api.updateGoal(goalId, data)
-    .then(ui.updateGoalSuccess(goalId))
+    .done(ui.updateGoalSuccess(goalId), getGoals)
     .catch(ui.updateGoalFailure)
 }
 
@@ -55,5 +61,6 @@ module.exports = {
   onCreateGoal,
   onGetGoals,
   onDeleteGoal,
-  onUpdateGoal
+  onUpdateGoal,
+  getGoals
 }

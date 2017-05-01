@@ -15,27 +15,72 @@
 
       <!-- NAV BAR -->
       <div class="container-fluid navbar navbar-default navbar-static-top">
-      <h1 class="navbar brand">iCarpe Diem - Bucket List Site </h1>
+      <h1 class="navbar brand">iCarpe Diem</h1>
+      <h3>Create Your Bucketlist</h3>
+      <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
+        Sign Out
+      </button>
+        <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="passwordbutton" data-toggle="modal" data-target="#newpasswordmodal">
+          Change Password
+        </button>
     </div>
 
     <!-- Homepage banner -->
+    <div class="sign-in-view">
     <div class="row well">
       <div class="col-md-6">
         <h2>Live out your dreams</h2>
-        <button type="button modalbutton" class="btn btn-default" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
-        <button type="button modalbutton" class="btn btn-primary" data-toggle="modal" data-target="#signinmodal">Sign In</button>
+        <button type="button modalbutton" class="btn btn-default loginbuttons" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+        <button type="button modalbutton" class="btn btn-primary loginbuttons" data-toggle="modal" data-target="#signinmodal">Sign In</button>
       </div>
     </div>
 
     <!-- ABOUT SECTION -->
     <div class="row text-center">
-    <div class="col-md-8">
+    <div class="col-md-8 col-md-offset-2">
       <h3>About iCarpe Diem</h3>
-      <p>We want to encourage the world to follow their dreams,
-        write their goals, and work to accomplish them.
+      <p>We want to encourage our members to not only seize the day but to also seize their life. Each individual has dreams and
+        aspirations worth pursuing and we want to to encourage them in their journey toward achieving their goals. This
+        application will allow you to create a bucketlist of items that you want to complete before you die. You will then
+        categorize the items and mark their status. This will allow you to track how you are doing toward achieving
+        your stated goals. You can add and delete items from your list at any time. But the first step toward achieving your goals
+        is to define them and then commit. If you are not yet a member, begin that process and join today! If you are a member,
+        welcome back! You may sign in and continue your journey!
       </p>
     </div>
     </div>
+
+    <!-- CATEGORIES -->
+    <div class="row">
+      <div class="col-md-4 categories">
+        <h3 class="text-center">Travel</h3>
+        <ul class="text-center list-unstyled">
+          <li class="text-center">Visit Paris, France
+          <li class="text-center">See the Great Wall of China
+          <li class="text-center">Go to the Grand Canyon
+          <li class="text-center">Visit every continent
+          </ul>
+      </div>
+      <div class="col-md-4 categories">
+        <h3 class="text-center">Skill</h3>
+        <ul class="text-center list-unstyled">
+          <li class="text-center">Learn to juggle
+          <li class="text-center">Become fluent in Spanish
+          <li class="text-center">Do a backflip
+          <li class="text-center">Learn to paint
+          </ul>
+      </div>
+      <div class="col-md-4 categories">
+        <h3 class="text-center">Career</h3>
+        <ul class="text-center list-unstyled">
+          <li class="text-center">Find a job you love
+          <li class="text-center">Become a manager
+          <li class="text-center">Start your own business
+          <li class="text-center">Retire by age 50
+          </ul>
+      </div>
+    </div>
+  </div>
 
 
       <!-- SIGN UP MODAL -->
@@ -89,29 +134,70 @@
 </div>
 </div>
 
-              <!-- CHANGE PASSWORD FORM -->
-              <form id="change-password">
-              <fieldset>
-                <legend>Change Password</legend>
-                <input type='password' name='passwords[old]' id ='old-password' placeholder='Old Password'>
-                <input type='password' name='passwords[new]' id ='new-password' placeholder='New Password'>
-                <input type="submit" name="submit" value="Change Password">
-            </fieldset>
-            </form>
 
-            <!-- SIGN OUT FORM -->
-            <form id="sign-out">
-              <fieldset>
-                <legend>Sign Out</legend>
-                <input type="submit" name="submit" value="Sign out!">
-              </fieldset>
-            </form>
+<!-- CHANGE PASSWORD modal button -->
+      <!-- <div class="text-center">
+        <button type="button" class="btn btn-primary" id="passwordbutton" data-toggle="modal" data-target="#newpasswordmodal">
+          Change Password
+        </button>
+      </div> -->
+
+    <!-- CHANGE PASSWORD Modal -->
+    <div class="modal fade" id="newpasswordmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Change Your Password</h5>
+          </div>
+          <div class="modal-body">
+            <form id="change-password">
+            <fieldset>
+              <input type='password' name='passwords[old]' id ='old-password' placeholder='Old Password'>
+              <input type='password' name='passwords[new]' id ='new-password' placeholder='New Password'>
+              <input type="submit" name="submit" value="Change Password">
+          </fieldset>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <div class="passworderror"></div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN OUT modal button -->
+  <!-- <div class="text-center">
+      <button type="button" class="btn btn-primary" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
+        Sign Out
+      </button>
+    </div> -->
+  <!-- SIGN OUT Modal -->
+  <div class="modal fade" id="signoutmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Are you sure you want to leave?</h5>
+        </div>
+        <div class="modal-body">
+          <form id="sign-out">
+            <fieldset>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
             <!-- ADD GOAL BUTTON -->
 
             <div class="text-center">
-              <button type="button" class="btn btn-primary loginbuttons hidingbuttons" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
+              <button type="button" class="btn btn-success afterlogin hidden" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
                 Add Bucketlist Item
               </button>
             </div>
@@ -128,19 +214,11 @@
             <fieldset>
               <legend>Create Bucketlist Item</legend>
               <label for="description">Description</label>
-                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description">
-                <label for="category">Category</label>
-                <select name="goal[category]">
-                  <option value="Travel">Travel</option>
-                  <option value="Skill">Skill</option>
-                  <option value="Fitness">Fitness</option>
-                </select>
-                <label for="status">Status</label>
-                <select name="goal[status]">
-                  <option value="Not started">Not started</option>
-                  <option value="In progress">In progress</option>
-                  <option value="Completed">Completed</option>
-                </select>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description" required>
+              <label for="category">Category</label>
+                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category" required>
+              <label for="status">Status</label>
+                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status" required>
                 <input type="submit" name="submit" value="Submit List Item">
             </fieldset>
             </form>
@@ -153,12 +231,16 @@
   </div>
 
             <!-- SEE GOALS -->
-            <div class="read-goals">
+            <!-- <div class="read-goals">
             <button type="button" class="btn get-goals">
                 See Bucketlist Items
               </button>
-              <p class="listing-goals"></p>
-            </div>
+            </div> -->
+
+
+            <!-- SEE GOALS  - Where handlebars renders -->
+
+            <div id="content" class="content"></div>
 
             <!-- <input name="goal[category]" type="text" id="create-goal-category" placeholder="Category"> -->
 

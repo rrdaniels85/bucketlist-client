@@ -1,2 +1,28 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$red: #c00;
+
+.hidden {
+  display: none;
+}
+
+.passworderror {
+  color: $red;
+  text-align: left;
+}
+
+.signinerror {
+  color: $red;
+  font-size: 15px;
+  text-align: left;
+}
+
+.signuperror {
+  color: $red;
+  text-align: left;
+}
+
+.categories {
+  border: 1px solid black
+}
