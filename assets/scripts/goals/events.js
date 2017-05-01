@@ -10,7 +10,7 @@ const onCreateGoal = function (event) {
   console.log('create goals was clicked!')
   const data = getFormFields(this)
   if (checkForBlanks(data)) {
-    console.log("sorry - can't create the item without something there")
+    $('.createerror').text('An error occurred. You must fill in all fields in order to create a new item.')
   } else {
     console.log(data)
     api.createGoal(data)
@@ -21,7 +21,6 @@ const onCreateGoal = function (event) {
 
 const checkForBlanks = function (data) {
   if ((data.goal.status === '') || (data.goal.description === '') || (data.goal.category === '')) {
-    $('.createerror').text('An error occurred. You must fill in all fields in order to create a new item.')
     console.log(data)
     return true
   } else {
@@ -56,12 +55,16 @@ const onUpdateGoal = function (event) {
   event.preventDefault()
   console.log('this update button works')
   const data = getFormFields(this)
-  console.log(data)
-  let goalId = $(this).attr('data-id')
-  console.log(goalId)
-  api.updateGoal(goalId, data)
-    .done(ui.updateGoalSuccess(goalId), getGoals)
-    .catch(ui.updateGoalFailure)
+  if (checkForBlanks(data)) {
+    $('.updateerror').text('An error occurred. You must fill in all fields in order to update an item.')
+  } else {
+    console.log(data)
+    let goalId = $(this).attr('data-id')
+    console.log(goalId)
+    api.updateGoal(goalId, data)
+      .done(ui.updateGoalSuccess(goalId), getGoals)
+      .catch(ui.updateGoalFailure)
+  }
 }
 
 const goalHandlers = () => {
