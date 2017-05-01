@@ -2,6 +2,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $red: #c00;
+$blue: #3366ff;
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -9,6 +10,10 @@ body {
 
 .handle {
   margin: 3px;
+}
+
+.nogoals{
+  font-size: 20px;
 }
 
 .title {
