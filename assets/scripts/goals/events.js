@@ -41,7 +41,7 @@ const onUpdateGoal = function (event) {
   event.preventDefault()
   console.log('this update button works')
   const data = getFormFields(this)
-  console.log(this)
+  console.log(data)
   let goalId = $(this).attr('data-id')
   console.log(goalId)
   api.updateGoal(goalId, data)
