@@ -38,6 +38,7 @@ const signOutSuccess = () => {
   console.log(store)
   $('#signoutmodal').modal('toggle')
   $('#content').empty()
+  $('.nogoals').empty()
   // $('body').removeClass('modal-open')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()

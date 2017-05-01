@@ -18,11 +18,17 @@ const createGoalFailure = (error) => {
 
 const getGoalsSuccess = (data) => {
   console.log(data)
-  data.goals.sort(function (a, b) {
-    return parseFloat(b.id) - parseFloat(a.id)
-  })
-  let showGoalsHtml = showGoalsTemplate({ goals: data.goals })
-  $('#content').append(showGoalsHtml)
+  if (data.goals.length === 0) {
+    $('.nogoals').text('You currently have no goals documented. Click the button to create some new goals!')
+    console.log('create some goals please')
+  } else {
+    $('.nogoals').empty()
+    data.goals.sort(function (a, b) {
+      return parseFloat(b.id) - parseFloat(a.id)
+    })
+    let showGoalsHtml = showGoalsTemplate({ goals: data.goals })
+    $('#content').append(showGoalsHtml)
+  }
 }
 
 const getGoalsFailure = (error) => {
