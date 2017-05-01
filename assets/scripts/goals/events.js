@@ -9,10 +9,25 @@ const onCreateGoal = function (event) {
   event.preventDefault()
   console.log('create goals was clicked!')
   const data = getFormFields(this)
-  console.log(data)
-  api.createGoal(data)
+  if (checkForBlanks(data)) {
+    console.log("sorry - can't create the item without something there")
+  } else {
+    console.log(data)
+    api.createGoal(data)
     .done(ui.createGoalSuccess, getGoals)
     .catch(ui.createGoalFailure)
+  }
+}
+
+const checkForBlanks = function (data) {
+  if ((data.goal.status === '') || (data.goal.description === '') || (data.goal.category === '')) {
+    $('.createerror').text('An error occurred. You must fill in all fields in order to create a new item.')
+    console.log(data)
+    return true
+  } else {
+    console.log('you are good to go on status')
+    return false
+  }
 }
 
 const onGetGoals = function (event) {

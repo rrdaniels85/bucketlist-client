@@ -214,16 +214,17 @@
             <fieldset>
               <legend>Create Bucketlist Item</legend>
               <label for="description">Description</label>
-                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description" required>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description">
               <label for="category">Category</label>
-                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category" required>
+                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category">
               <label for="status">Status</label>
-                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status" required>
+                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status">
                 <input type="submit" name="submit" value="Submit List Item">
             </fieldset>
             </form>
           </div>
         <div class="modal-footer">
+          <div class="createerror"></div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
