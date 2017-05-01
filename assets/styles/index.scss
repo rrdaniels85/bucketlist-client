@@ -3,6 +3,56 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $red: #c00;
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.handle {
+  margin: 3px;
+}
+
+.title {
+  font-size: 60px;
+  font-family: 'Love Ya Like A Sister', cursive, sans-serif;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-family: 'Love Ya Like A Sister', cursive, sans-serif;
+}
+
+.about-title {
+  font-size: 40px;
+  font-family: 'Love Ya Like A Sister', cursive, sans-serif;
+  opacity: .90;
+  background-color: white;
+}
+
+.about-section {
+  font-size: 20px;
+  opacity: .90;
+  background-color: white;
+}
+
+.about {
+  background-image: url("http://i.imgur.com/n6Zedmp.jpg");
+}
+
+.suggested-categories {
+  font-size: 40px;
+  text-decoration: underline;
+  font-family: 'Love Ya Like A Sister', cursive, sans-serif;
+
+}
+
+.cat-list {
+  font-size: 18px
+}
+
+.btn {
+  font-family: sans-serif;
+}
+
 .hidden {
   display: none;
 }
@@ -25,4 +75,25 @@ $red: #c00;
 
 .categories {
   border: 1px solid black
+}
+
+.createerror {
+  color: $red;
+  font-size: 15px;
+  text-align: left;
+}
+
+.updateerror {
+  color: $red;
+  font-size: 15px;
+  text-align: left;
+}
+
+.items {
+  text-align: center;
+  font-size: large;
+}
+
+.afterlogin {
+  margin: 5px;
 }

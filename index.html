@@ -10,13 +10,15 @@
       <!-- Do not add `script` tags unless you know what you are doing -->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     </head>
     <body class="container-fluid">
 
       <!-- NAV BAR -->
       <div class="container-fluid navbar navbar-default navbar-static-top">
-      <h1 class="navbar brand">iCarpe Diem</h1>
-      <h3>Create Your Bucketlist</h3>
+      <h1 class="navbar brand title">iCarpe Diem</h1>
+      <h3 class="sub-title">Create Your Bucketlist</h3>
       <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
         Sign Out
       </button>
@@ -30,31 +32,72 @@
     <div class="row well">
       <div class="col-md-6">
         <h2>Live out your dreams</h2>
-        <button type="button modalbutton" class="btn btn-default loginbuttons" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
-        <button type="button modalbutton" class="btn btn-primary loginbuttons" data-toggle="modal" data-target="#signinmodal">Sign In</button>
+        <button type="button modalbutton" class="btn btn-default btn-large loginbuttons" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+        <button type="button modalbutton" class="btn btn-primary btn-large loginbuttons" data-toggle="modal" data-target="#signinmodal">Sign In</button>
       </div>
     </div>
 
     <!-- ABOUT SECTION -->
-    <div class="row text-center">
+    <div class="row text-center about">
     <div class="col-md-8 col-md-offset-2">
-      <h3>About iCarpe Diem</h3>
-      <p>We want to encourage our members to not only seize the day but to also seize their life. Each individual has dreams and
+      <h3 class="about-title">About iCarpe Diem</h3>
+      <p class="about-section">We want to encourage our members to not only seize the day but to also seize their life. Each individual has dreams and
         aspirations worth pursuing and we want to to encourage them in their journey toward achieving their goals. This
         application will allow you to create a bucketlist of items that you want to complete before you die. You will then
         categorize the items and mark their status. This will allow you to track how you are doing toward achieving
         your stated goals. You can add and delete items from your list at any time. But the first step toward achieving your goals
-        is to define them and then commit. If you are not yet a member, begin that process and join today! If you are a member,
+        is to define them and then commit. If you are not yet a member, begin that process and sign up and then sign in today! If you are a member,
         welcome back! You may sign in and continue your journey!
       </p>
     </div>
     </div>
 
+<!--
+                <div id="carousel-example-generic" class="carousel slide">
+                  <! Indicators -->
+                  <!-- <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ol> -->
+
+                    <!-- Wrapper for slides -->
+                        <!-- <div class="carousel-inner"> -->
+                            <!-- Slide 1-->
+                            <!-- <div class="item active">
+                                <img src="http://i.imgur.com/YjCjjtq.jpg" alt="Slide 1" />
+                            </div> -->
+
+                            <!-- Slide 2-->
+                              <!-- <div class="item">
+                                  <img src="http://i.imgur.com/iRvEjBP.jpg" alt="Slide 2" />
+                              </div> -->
+
+                          <!-- Slide 3-->
+                            <!-- <div class="item">
+                                <img src="http://i.imgur.com/FGomqpV.jpg" alt="Slide 3" />
+                            </div>
+                          </div> -->
+
+
+                          <!-- <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                          </a>
+                          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                          </a>
+                        </div> -->
+<div class="text-center">
+  <h2 class="suggested-categories">Suggested Categories</h3>
     <!-- CATEGORIES -->
     <div class="row">
       <div class="col-md-4 categories">
         <h3 class="text-center">Travel</h3>
-        <ul class="text-center list-unstyled">
+        <div class="items">
+        <i class="glyphicon glyphicon-plane"></i>
+      </div>
+        <ul class="text-center list-unstyled cat-list">
+          <li class="text-center">
           <li class="text-center">Visit Paris, France
           <li class="text-center">See the Great Wall of China
           <li class="text-center">Go to the Grand Canyon
@@ -63,7 +106,10 @@
       </div>
       <div class="col-md-4 categories">
         <h3 class="text-center">Skill</h3>
-        <ul class="text-center list-unstyled">
+        <div class="items">
+        <i class="glyphicon glyphicon-star"></i>
+        </div>
+        <ul class="text-center list-unstyled cat-list">
           <li class="text-center">Learn to juggle
           <li class="text-center">Become fluent in Spanish
           <li class="text-center">Do a backflip
@@ -72,7 +118,10 @@
       </div>
       <div class="col-md-4 categories">
         <h3 class="text-center">Career</h3>
-        <ul class="text-center list-unstyled">
+        <div class="items">
+        <i class="glyphicon glyphicon-briefcase"></i>
+        </div>
+        <ul class="text-center list-unstyled cat-list">
           <li class="text-center">Find a job you love
           <li class="text-center">Become a manager
           <li class="text-center">Start your own business
@@ -80,7 +129,87 @@
           </ul>
       </div>
     </div>
+
+  <div class="row">
+    <div class="col-md-4 categories">
+      <h3 class="text-center">Fitness</h3>
+      <div class="items">
+      <i class="glyphicon glyphicon-road"></i>
+      </div>
+      <ul class="text-center list-unstyled cat-list">
+        <li class="text-center">Run a Marathon
+        <li class="text-center">Complete a Triathalon
+        <li class="text-center">Learn to Play Soccer
+        <li class="text-center">Maintain a Healthy Weight
+        </ul>
+    </div>
+    <div class="col-md-4 categories">
+      <h3 class="text-center">Food</h3>
+      <div class="items">
+      <i class="glyphicon glyphicon-cutlery"></i>
+      </div>
+      <ul class="text-center list-unstyled cat-list">
+        <li class="text-center">Try Sushi
+        <li class="text-center">Bake a Soufflee
+        <li class="text-center">Be Vegetarian for a Month
+        <li class="text-center">Take a Cake Decorating Class
+        </ul>
+    </div>
+    <div class="col-md-4 categories">
+      <h3 class="text-center">Relationships</h3>
+      <div class="items">
+      <i class="glyphicon glyphicon-heart"></i>
+      </div>
+      <ul class="text-center list-unstyled cat-list">
+        <li class="text-center">Get Married
+        <li class="text-center">Have Children
+        <li class="text-center">Find Your Soulmate
+        <li class="text-center">Make a Best Friend
+        </ul>
+    </div>
   </div>
+
+
+<div class="row">
+  <div class="col-md-4 categories">
+    <h3 class="text-center">Events</h3>
+    <div class="items">
+    <i class="glyphicon glyphicon-calendar"></i>
+    </div>
+    <ul class="text-center list-unstyled cat-list">
+      <li class="text-center">Attend the Olympic Games
+      <li class="text-center">See Your Favorite Artist on Tour
+      <li class="text-center">Attend a Live TV Show Taping
+      <li class="text-center">Participate in the Running of the Bulls
+      </ul>
+  </div>
+  <div class="col-md-4 categories">
+    <h3 class="text-center">Adventure</h3>
+    <div class="items">
+    <i class="glyphicon glyphicon-pushpin"></i>
+    </div>
+    <ul class="text-center list-unstyled cat-list">
+      <li class="text-center">Go Ziplinig
+      <li class="text-center">Go Skydiving
+      <li class="text-center">Climb a Mountain
+      <li class="text-center">Scuba Dive
+      </ul>
+  </div>
+  <div class="col-md-4 categories">
+    <h3 class="text-center">Achievements</h3>
+    <div class="items">
+    <i class="glyphicon glyphicon-flag"></i>
+    </div>
+    <ul class="text-center list-unstyled cat-list">
+      <li class="text-center">Earn a College Degree
+      <li class="text-center">Earn a Graduate Degree
+      <li class="text-center">Buy a House
+      <li class="text-center">Buy a Car
+      </ul>
+  </div>
+</div>
+</div>
+</div>
 
 
       <!-- SIGN UP MODAL -->
@@ -202,6 +331,10 @@
               </button>
             </div>
 
+            <div class="text-center">
+              <p class="nogoals text-center"></p>
+            </div>
+
   <!-- ADD GOAL -->
             <div class="modal fade" id="addgoalmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -214,16 +347,17 @@
             <fieldset>
               <legend>Create Bucketlist Item</legend>
               <label for="description">Description</label>
-                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description" required>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description">
               <label for="category">Category</label>
-                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category" required>
+                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category">
               <label for="status">Status</label>
-                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status" required>
+                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status">
                 <input type="submit" name="submit" value="Submit List Item">
             </fieldset>
             </form>
           </div>
         <div class="modal-footer">
+          <div class="createerror"></div>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>

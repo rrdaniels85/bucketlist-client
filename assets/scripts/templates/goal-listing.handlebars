@@ -9,8 +9,8 @@
       <ul class="list-unstyled"><li data-id="{{goal.id}}">Category: {{goal.category}}</li>
         <li data-id="{{goal.id}}">Status: {{goal.status}}</li>
         <li>
-          <button type="button" class="update btn btn-default" data-toggle="modal" data-target="#updategoalmodal{{goal.id}}">Update Item</button>
-          <button type="button" class="remove btn btn-default" data-toggle="modal" data-target="#removegoalmodal{{goal.id}}">Remove Item</button>
+          <button type="button" class="update btn btn-primary handle" data-toggle="modal" data-target="#updategoalmodal{{goal.id}}">Update Item</button>
+          <button type="button" class="remove btn btn-default handle" data-toggle="modal" data-target="#removegoalmodal{{goal.id}}">Remove Item</button>
         </li>
       </ul>
       <div class="modal fade" id="updategoalmodal{{goal.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -22,18 +22,15 @@
             <div class="modal-body">
               <form class="update-goal" data-id="{{goal.id}}">
               <fieldset>
-                <label for="description">Description</label>
-                <input type='text' name='goal[description]' id ='updateDescription' value="{{goal.description}}" placeholder="Item Description" required>
-                <label for="category">Category</label>
-                <input type='text' name='goal[category]' id ='updateCategory' value="{{goal.category}}" placeholder="Item's Category" required>
-                <label for="status">Status</label>
-                <input type='text' name='goal[status]' id ='updateStatus' value="{{goal.status}}" placeholder="Item's Status" required>
+                <input type='text' name='goal[description]' id ='updateDescription' value="{{goal.description}}" placeholder="Item Description">
+                <input type='text' name='goal[category]' id ='updateCategory' value="{{goal.category}}" placeholder="Item's Category">
+                <input type='text' name='goal[status]' id ='updateStatus' value="{{goal.status}}" placeholder="Item's Status">
                 <input data-id="{{goal.id}}" type="submit" name="submit" value="Update List Item">
             </fieldset>
             </form>
             </div>
             <div class="modal-footer">
-              <div class="passworderror"></div>
+              <div class="updateerror"></div>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
           </div>
