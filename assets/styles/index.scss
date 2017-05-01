@@ -3,6 +3,31 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $red: #c00;
 
+body {
+  font-family: 'Love Ya Like A Sister', cursive, sans-serif;
+}
+
+.title {
+  font-size: 70px;
+}
+
+.about-title {
+  font-size: 50px;
+}
+
+.about-section {
+  font-size: 20px;
+}
+
+.suggested-categories {
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+.btn {
+  font-family: sans-serif;
+}
+
 .hidden {
   display: none;
 }
