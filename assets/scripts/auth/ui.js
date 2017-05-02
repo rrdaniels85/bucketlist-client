@@ -42,8 +42,7 @@ const signOutSuccess = () => {
   $('.afterlogin').addClass('hidden')
 }
 
-const signOutFailure = (error) => {
-  console.error(error)
+const signOutFailure = () => {
 }
 
 const changePasswordSuccess = () => {

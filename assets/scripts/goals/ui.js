@@ -11,8 +11,7 @@ const createGoalSuccess = (data) => {
   $('.modal-backdrop').remove()
 }
 
-const createGoalFailure = (error) => {
-  console.error(error)
+const createGoalFailure = () => {
 }
 
 const getGoalsSuccess = (data) => {
@@ -32,8 +31,7 @@ const getGoalsSuccess = (data) => {
   }
 }
 
-const getGoalsFailure = (error) => {
-  console.error(error)
+const getGoalsFailure = () => {
 }
 
 const deleteGoalSuccess = (data) => {
@@ -44,8 +42,7 @@ const deleteGoalSuccess = (data) => {
   $('.modal-backdrop').remove()
 }
 
-const deleteGoalFailure = (error) => {
-  console.error(error)
+const deleteGoalFailure = () => {
 }
 
 const updateGoalSuccess = (data) => {
@@ -56,8 +53,7 @@ const updateGoalSuccess = (data) => {
   $('.modal-backdrop').remove()
 }
 
-const updateGoalFailure = (error) => {
-  console.error(error)
+const updateGoalFailure = () => {
 }
 
 module.exports = {
