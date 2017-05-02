@@ -20,7 +20,7 @@ const getGoalsSuccess = (data) => {
   console.log(data)
   if (data.goals.length === 0) {
     // if user has not yet created any goals, display below message
-    $('.nogoals').text('You currently have no goals documented. Click the button to create some new goals!')
+    $('.nogoals').text('You currently have no bucket list items documented. Click the button to create some list items!')
     console.log('create some goals please')
   } else {
     // clear any goals that were there before

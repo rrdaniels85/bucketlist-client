@@ -22,7 +22,7 @@ Install with `npm install`.
 ## Technologies Used
 -   [imgur](http://imgur.com/) - For storing images used with my app and storing wireframes.
 -   [googledocs](https://www.google.com/docs/about/) - For storing my user stories.
-- JavaScript, HTML, CSS, SASS, Ruby on Rails, Handlebars, Boostrap
+- JavaScript, HTML, CSS, Ruby on Rails, Handlebars, Boostrap
 
 ## Wireframes
 
