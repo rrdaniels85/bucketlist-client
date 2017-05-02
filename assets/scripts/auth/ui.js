@@ -6,6 +6,7 @@ const goalevents = require('../goals/events.js')
 
 const signUpSuccess = (data) => {
   console.log('sign up success ran')
+  // assign user data in the store
   store.user = data.user
   $('#signupmodal').modal('toggle')
   $('#signinmodal').modal('toggle')
