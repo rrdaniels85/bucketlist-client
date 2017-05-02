@@ -8,7 +8,6 @@ const signUp = (data) => {
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
     data
-    // data: data (identical to above line)
   })
 }
 
@@ -17,7 +16,6 @@ const signIn = (data) => {
     url: config.apiOrigin + '/sign-in',
     method: 'POST',
     data
-    // data: data (identical to above line)
   })
 }
 
@@ -28,7 +26,6 @@ const signOut = () => {
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
-    // data: data (identical to above line)
   })
 }
 
