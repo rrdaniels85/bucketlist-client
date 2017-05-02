@@ -37,6 +37,7 @@ $(() => {
     $('#sign-in').find('input:text, input:password, input:password, select, textarea').val('')
     $('#sign-up').find('input:text, input:password, input:password, select, textarea').val('')
     $('#change-password').find('input:text, input:password, input:password, select, textarea').val('')
+    $('.signupsuccess').text('')
   })
 })
 

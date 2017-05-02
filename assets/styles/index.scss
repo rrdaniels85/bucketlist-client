@@ -29,9 +29,17 @@ body {
   color: white;
 }
 
+.instructions-title{
+  text-decoration: underline;
+}
+
 ol {
   text-align: center;
   list-style-position: inside;
+}
+
+.signupsuccess {
+  color: green;
 }
 
 .sub-title {
