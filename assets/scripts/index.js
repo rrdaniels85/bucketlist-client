@@ -39,3 +39,16 @@ $(() => {
     $('#change-password').find('input:text, input:password, input:password, select, textarea').val('')
   })
 })
+
+$(() => {
+  $('#addgoalbutton').on('click', function () {
+    $('.createerror').text('')
+    $('#create-goal').find('input:text, input:text, input:text, select, textarea').val('')
+  })
+})
+
+$(() => {
+  $(document).on('click', '.update', function () {
+    $('.updateerror').text('')
+  })
+})
