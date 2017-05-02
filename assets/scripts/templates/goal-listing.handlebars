@@ -20,11 +20,17 @@
               <h5 class="modal-title" id="exampleModalLongTitle">Update Bucketlist Item</h5>
             </div>
             <div class="modal-body">
+              <p>Current Item Summary<br>
+                 Description: {{goal.description}}<br>
+                 Category: {{goal.category}}<br>
+                 Status: {{goal.status}}<br>
+               </p>
+               <p>*You must fill in all fields in order to update a list item</p>
               <form class="update-goal" data-id="{{goal.id}}">
               <fieldset>
-                <input type='text' name='goal[description]' id ='updateDescription' value="{{goal.description}}" placeholder="Item Description">
-                <input type='text' name='goal[category]' id ='updateCategory' value="{{goal.category}}" placeholder="Item's Category">
-                <input type='text' name='goal[status]' id ='updateStatus' value="{{goal.status}}" placeholder="Item's Status">
+                <input type='text' name='goal[description]' id ='updateDescription' placeholder="Item's Description">
+                <input type='text' name='goal[category]' id ='updateCategory' placeholder="Item's Category">
+                <input type='text' name='goal[status]' id ='updateStatus' placeholder="Item's Status">
                 <input data-id="{{goal.id}}" type="submit" name="submit" value="Update List Item">
             </fieldset>
             </form>
