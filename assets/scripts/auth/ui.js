@@ -5,23 +5,19 @@ const goalui = require('../goals/ui.js')
 const goalevents = require('../goals/events.js')
 
 const signUpSuccess = (data) => {
-  console.log('sign up success ran')
   // assign user data in the store
   store.user = data.user
   $('#signupmodal').modal('toggle')
   $('#signinmodal').modal('toggle')
   $('.signupsuccess').text('You successfully signed up! Please sign in to continue.')
-  console.log(store)
 }
 
-const signUpFailure = (error) => {
-  console.error(error)
+const signUpFailure = () => {
   $('.signuperror').text('An error occurred. You may have entered invalid credentials. Try again.')
 }
 
 const signInSuccess = (data) => {
   store.user = data.user
-  console.log(store)
   $('.sign-in-view').addClass('hidden')
   $('.afterlogin').removeClass('hidden')
   $('#signinmodal').modal('toggle')
@@ -30,14 +26,12 @@ const signInSuccess = (data) => {
     .catch(goalui.getGoalsFailure)
 }
 
-const signInFailure = (error) => {
-  console.error(error)
+const signInFailure = () => {
   $('.signinerror').text('An error occurred. You may have entered invalid credentials. Try again.')
 }
 
 const signOutSuccess = () => {
   store.user = null
-  console.log(store)
   $('#signoutmodal').modal('toggle')
   $('#content').empty()
   $('.nogoals').text('')
@@ -53,13 +47,11 @@ const signOutFailure = (error) => {
 }
 
 const changePasswordSuccess = () => {
-  console.log('Password Successfully Changed.')
   $('#newpasswordmodal').modal('toggle')
   $('.passworderror').text('')
 }
 
-const changePasswordFailure = (error) => {
-  console.error(error)
+const changePasswordFailure = () => {
   $('.passworderror').text('An error occurred. You may have entered the wrong password. Try again.')
 }
 

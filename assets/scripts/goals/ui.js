@@ -5,7 +5,6 @@ const api = require('./api.js')
 
 const createGoalSuccess = (data) => {
   $('#addgoalmodal').modal('toggle')
-  console.log('you successfully created a goal')
   $('#content').empty()
   // $('body').removeClass('modal-open')
   $('body').removeClass('modal-open')
@@ -17,11 +16,9 @@ const createGoalFailure = (error) => {
 }
 
 const getGoalsSuccess = (data) => {
-  console.log(data)
   if (data.goals.length === 0) {
     // if user has not yet created any goals, display below message
     $('.nogoals').text('You currently have no bucket list items documented. Click the button to create some list items!')
-    console.log('create some goals please')
   } else {
     // clear any goals that were there before
     $('.nogoals').empty()
@@ -40,13 +37,11 @@ const getGoalsFailure = (error) => {
 }
 
 const deleteGoalSuccess = (data) => {
-  console.log(data)
   $('#removegoalmodal' + data).modal('toggle')
   $('#content').empty()
   // $('body').removeClass('modal-open')
   $('body').removeClass('modal-open')
   $('.modal-backdrop').remove()
-  console.log('you successfully deleted that goal')
 }
 
 const deleteGoalFailure = (error) => {
@@ -54,9 +49,7 @@ const deleteGoalFailure = (error) => {
 }
 
 const updateGoalSuccess = (data) => {
-  console.log(data)
   $('#updategoalmodal' + data).modal('toggle')
-  console.log('you successfully updated that goal')
   $('#content').empty()
   // $('body').removeClass('modal-open')
   $('body').removeClass('modal-open')

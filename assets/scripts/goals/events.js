@@ -8,7 +8,6 @@ const ui = require('./ui')
 const onCreateGoal = function (event) {
   // prevent screen from refreshing
   event.preventDefault()
-  console.log('create goals was clicked!')
   // assign form field inputs to variable data
   const data = getFormFields(this)
   // check that form field entries are valid
@@ -16,7 +15,6 @@ const onCreateGoal = function (event) {
     // if invalid, notify user and do not send request to API
     $('.createerror').text('An error occurred. You must fill in all fields in order to create a new item.')
   } else {
-    console.log(data)
     // submit post request to API
     api.createGoal(data)
     .done(ui.createGoalSuccess, getGoals)
@@ -27,11 +25,9 @@ const onCreateGoal = function (event) {
 const checkForBlanks = function (data) {
   // check to see if user entered valid values in form fields
   if ((data.goal.status === '') || (data.goal.description === '') || (data.goal.category === '')) {
-    console.log(data)
     // if not valid - return true
     return true
   } else {
-    console.log('you are good to go on status')
     // if valid - return false
     return false
   }
@@ -40,7 +36,6 @@ const checkForBlanks = function (data) {
 const onGetGoals = function (event) {
   // prevent screen from refreshing
   event.preventDefault()
-  console.log('get goals was clicked!')
   // submit request to api to index goals
   api.getGoals()
     .then(ui.getGoalsSuccess)
@@ -68,7 +63,6 @@ const getGoals = function () {
 const onUpdateGoal = function (event) {
   // prevent screen from refreshing
   event.preventDefault()
-  console.log('this update button works')
   // assign data to be what user entered in form fields
   const data = getFormFields(this)
   // check for valid data entries in form fields
@@ -76,10 +70,8 @@ const onUpdateGoal = function (event) {
     // if invalid - notify user and do not send to API
     $('.updateerror').text('An error occurred. You must fill in all fields in order to update an item.')
   } else {
-    console.log(data)
     // if valid - assign data-id of item to the variable goalId
     let goalId = $(this).attr('data-id')
-    console.log(goalId)
     // pass goalID to the API Patch request for item
     api.updateGoal(goalId, data)
       .done(ui.updateGoalSuccess(goalId), getGoals)
