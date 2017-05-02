@@ -5,11 +5,11 @@ iCarpeDiem is an application that allows individuals to create a â€œBucketlistâ€
 
 ## Link to Live application
 
--   [iCarpeDiem Application] (https://rrdaniels85.github.io/bucketlist-client/)
+-   [iCarpeDiem Application](https://rrdaniels85.github.io/bucketlist-client/)
 
 ## Link to Bucketlist API for iCarpe Diem
 
--   [Bucketlist API] (https://github.com/rrdaniels85/bucketlist-api)
+-   [Bucketlist API](https://github.com/rrdaniels85/bucketlist-api)
 
 ## Dependencies
 
