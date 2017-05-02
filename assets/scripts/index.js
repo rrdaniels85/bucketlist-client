@@ -50,5 +50,6 @@ $(() => {
 $(() => {
   $(document).on('click', '.update', function () {
     $('.updateerror').text('')
+    $('.update-goal').find('input:text input:text, input:text, select, textarea').val('')
   })
 })
