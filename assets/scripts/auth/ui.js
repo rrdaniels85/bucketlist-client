@@ -54,8 +54,8 @@ const signOutFailure = (error) => {
 
 const changePasswordSuccess = () => {
   console.log('Password Successfully Changed.')
+  $('#newpasswordmodal').modal('toggle')
   $('.passworderror').text('')
-  $('.passwordsuccess').text('You successfully changed your password. Click "Close" to return to your list.')
 }
 
 const changePasswordFailure = (error) => {
