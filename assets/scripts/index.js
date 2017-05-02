@@ -25,6 +25,7 @@ $(() => {
 $(() => {
   $('#passwordbutton').on('click', function () {
     $('.passworderror').text('')
+    $('.passwordsuccess').text('')
     $('#change-password').find('input:text, input:password, input:password, select, textarea').val('')
   })
 })
