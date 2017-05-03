@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bucket List</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags unless you know what you are doing -->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags unless you know what you are doing -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    </head>
+    <body class="container-fluid">
+
+      <!-- NAV BAR -->
+      <div class="container-fluid navbar navbar-default navbar-static-top">
+      <h1 class="navbar brand title">iCarpe Diem</h1>
+      <h3 class="sub-title">Create Your Bucket List</h3>
+      <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="signoutmodbutton" data-toggle="modal" data-target="#signoutmodal">
+        Sign Out
+      </button>
+        <button type="button" class="btn btn-primary navbar-right afterlogin hidden" id="passwordbutton" data-toggle="modal" data-target="#newpasswordmodal">
+          Change Password
+        </button>
+    </div>
+
+    <!-- Homepage banner -->
+    <div class="sign-in-view">
+    <div class="row well">
+      <div class="col-md-6">
+        <h2>Live out your dreams</h2>
+        <button type="button modalbutton" class="btn btn-default btn-large loginbuttons" data-toggle="modal" data-target="#signupmodal">Sign Up</button>
+        <button type="button modalbutton" class="btn btn-primary btn-large loginbuttons" data-toggle="modal" data-target="#signinmodal">Sign In</button>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="row text-center about">
+    <div class="col-md-8 col-md-offset-2">
+      <h3 class="about-title">About iCarpe Diem</h3>
+      <p class="about-section">From Latin to English, the phrase "carpe diem" roughly translates to "seize the day."
+        Here at iCarpe Diem, we want to encourage our members to not only seize the day, but to also seize their lives.
+        Each individual has dreams and aspirations worth pursuing and we want to to help our members in their journeys
+        toward achieving their goals. This application will allow you to create a bucket list. A bucket list is simply a
+        list of things that you want to accomplish before you die. You will categorize the items and mark their statuses.
+        This will allow you to track how you are doing toward achieving your stated goals. You can add and delete items
+        from your list at any time. The first step toward achieving your goals is to define them and then commit. If
+        you are not yet a member, begin that process and sign up and then sign in today! If you are a member,
+        welcome back! You may sign in and continue your journey!
+      </p>
+    </div>
+    </div>
+
+    <!-- IDEAS & CATEGORIES -->
+    <h2 class="suggested-categories text-center">Ideas to Explore</h2>
+      <div class="row">
+        <div class="col-md-4 categories">
+          <h3 class="text-center">Travel</h3>
+          <div class="items">
+            <i class="glyphicon glyphicon-plane"></i>
+          </div>
+        <ul class="text-center list-unstyled cat-list">
+          <li class="text-center">
+          <li class="text-center">Visit Paris, France
+          <li class="text-center">See the Great Wall of China
+          <li class="text-center">Go to the Grand Canyon
+          <li class="text-center">Visit every continent
+          </ul>
+        </div>
+      <div class="col-md-4 categories">
+        <h3 class="text-center">Skill</h3>
+        <div class="items">
+        <i class="glyphicon glyphicon-star"></i>
+        </div>
+        <ul class="text-center list-unstyled cat-list">
+          <li class="text-center">Learn to juggle
+          <li class="text-center">Become fluent in Spanish
+          <li class="text-center">Do a backflip
+          <li class="text-center">Learn to paint
+          </ul>
+      </div>
+      <div class="col-md-4 categories">
+        <h3 class="text-center">Career</h3>
+        <div class="items">
+        <i class="glyphicon glyphicon-briefcase"></i>
+        </div>
+        <ul class="text-center list-unstyled cat-list">
+          <li class="text-center">Find a job you love
+          <li class="text-center">Become a manager
+          <li class="text-center">Start your own business
+          <li class="text-center">Retire by age 50
+          </ul>
+      </div>
+    </div>
+
+  <div class="row">
+    <div class="col-md-4 categories">
+      <h3 class="text-center">Fitness</h3>
+      <div class="items">
+      <i class="glyphicon glyphicon-road"></i>
+      </div>
+      <ul class="text-center list-unstyled cat-list">
+        <li class="text-center">Run a Marathon
+        <li class="text-center">Complete a Triathalon
+        <li class="text-center">Learn to Play Soccer
+        <li class="text-center">Maintain a Healthy Weight
+        </ul>
+    </div>
+    <div class="col-md-4 categories">
+      <h3 class="text-center">Food</h3>
+      <div class="items">
+      <i class="glyphicon glyphicon-cutlery"></i>
+      </div>
+      <ul class="text-center list-unstyled cat-list">
+        <li class="text-center">Try Sushi
+        <li class="text-center">Bake a Soufflee
+        <li class="text-center">Be Vegetarian for a Month
+        <li class="text-center">Take a Cake Decorating Class
+        </ul>
+    </div>
+    <div class="col-md-4 categories">
+      <h3 class="text-center">Relationships</h3>
+      <div class="items">
+      <i class="glyphicon glyphicon-heart"></i>
+      </div>
+      <ul class="text-center list-unstyled cat-list">
+        <li class="text-center">Get Married
+        <li class="text-center">Have Children
+        <li class="text-center">Find Your Soulmate
+        <li class="text-center">Make a Best Friend
+        </ul>
+    </div>
+  </div>
+
+
+<div class="row">
+  <div class="col-md-4 categories">
+    <h3 class="text-center">Events</h3>
+    <div class="items">
+    <i class="glyphicon glyphicon-calendar"></i>
+    </div>
+    <ul class="text-center list-unstyled cat-list">
+      <li class="text-center">Attend the Olympic Games
+      <li class="text-center">See Your Favorite Artist on Tour
+      <li class="text-center">Attend a Live TV Show Taping
+      <li class="text-center">Participate in the Running of the Bulls
+      </ul>
+  </div>
+  <div class="col-md-4 categories">
+    <h3 class="text-center">Adventure</h3>
+    <div class="items">
+    <i class="glyphicon glyphicon-pushpin"></i>
+    </div>
+    <ul class="text-center list-unstyled cat-list">
+      <li class="text-center">Go Ziplinig
+      <li class="text-center">Go Skydiving
+      <li class="text-center">Climb a Mountain
+      <li class="text-center">Scuba Dive
+      </ul>
+  </div>
+  <div class="col-md-4 categories">
+    <h3 class="text-center">Achievements</h3>
+    <div class="items">
+    <i class="glyphicon glyphicon-flag"></i>
+    </div>
+    <ul class="text-center list-unstyled cat-list">
+      <li class="text-center">Earn a College Degree
+      <li class="text-center">Earn a Graduate Degree
+      <li class="text-center">Buy a House
+      <li class="text-center">Buy a Car
+      </ul>
+  </div>
+</div>
+</div>
+</div>
+
+
+      <!-- SIGN UP MODAL -->
+      <div class="modal fade" id="signupmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Begin Building Your List - Sign Up!</h5>
+      </div>
+      <div class="modal-body">
+      <form id="sign-up">
+      <fieldset>
+        <legend>Sign Up!</legend>
+          <input name="credentials[email]" type="text" id="sign-up-emai" placeholder="Email">
+          <input name="credentials[password]" type="password" id="sign-up-password" placeholder="Password">
+          <input name="credentials[password_confirmation]" type="password" id="sign-up-password-confirmation" placeholder="Confirm Password">
+          <input type="submit" name="submit" value="Sign up!">
+      </fieldset>
+      </form>
+    </div>
+<div class="modal-footer">
+  <div class="signuperror"></div>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+  </div>
+</div>
+</div>
+</div>
+
+      <!-- SIGN IN MODAL -->
+      <div class="modal fade" id="signinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title signupsuccess" id="exampleModalLongTitle"></h5>
+      </div>
+      <div class="modal-body">
+      <form id="sign-in">
+      <fieldset>
+        <legend>Sign in!</legend>
+          <input name="credentials[email]" type="text" id="sign-in-email" placeholder="Email">
+          <input name="credentials[password]" type="password" id="sign-in-password" placeholder="Password">
+          <input type="submit" name="submit" value="Sign in!">
+      </fieldset>
+      </form>
+    </div>
+<div class="modal-footer">
+<div class="signinerror"></div>
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+
+    <!-- CHANGE PASSWORD Modal -->
+    <div class="modal fade" id="newpasswordmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Change Your Password</h5>
+          </div>
+          <div class="modal-body">
+            <form id="change-password">
+            <fieldset>
+              <input type='password' name='passwords[old]' id ='old-password' placeholder='Old Password'>
+              <input type='password' name='passwords[new]' id ='new-password' placeholder='New Password'>
+              <input type="submit" name="submit" value="Change Password">
+          </fieldset>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <div class="passworderror"></div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- SIGN OUT Modal -->
+  <div class="modal fade" id="signoutmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Are you sure you want to leave?</h5>
+        </div>
+        <div class="modal-body">
+          <form id="sign-out">
+            <fieldset>
+              <input type="submit" name="submit" value="Sign out!">
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTRUCTIONS -->
+  <div class="instructions afterlogin hidden">
+    <h2>Welcome!</h2>
+    <div class="instructions-title">Instructions</div>
+    <ol>
+      <li>Create a new item by clicking on the "Add Bucket List Item" button
+      <li>Fill in a description of your bucket list item
+      <li>Fill in a category for the item (Ex. Travel, Fitness, Career, etc.)
+      <li>Fill in a status for the item (Ex. Not started, In progress, Completed)
+      <li>Click 'Submit List Item'!
+      <li>You may update or remove an item on your list at any time
+    </ol>
+  </div>
+
+
+            <!-- ADD GOAL BUTTON -->
+            <div class="text-center">
+              <button type="button" class="btn btn-large btn-success afterlogin hidden" id="addgoalbutton" data-toggle="modal" data-target="#addgoalmodal">
+                Add Bucket List Item
+              </button>
+            </div>
+
+            <div class="text-center">
+              <h2 class="list-title afterlogin hidden">Your Bucket List</h2>
+              <p class="nogoals text-center"></p>
+            </div>
+
+            <!-- ADD GOAL MODAL-->
+            <div class="modal fade" id="addgoalmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Add a Bucket List Item</h5>
+                </div>
+                <div class="modal-body">
+            <form id="create-goal">
+            <fieldset>
+              <legend>Create Bucket List Item</legend>
+                <input name="goal[description]" type="text" id="create-goal-description" placeholder="List Item Description">
+                <input name="goal[category]" type="text" id="create-goal-category" placeholder="List Item Category">
+                <input name="goal[status]" type="text" id="create-goal-status" placeholder="List Item Status">
+                <input type="submit" name="submit" value="Submit List Item">
+            </fieldset>
+            </form>
+          </div>
+        <div class="modal-footer">
+          <div class="createerror"></div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+            <!-- SEE GOALS -->
+            <!-- <div class="read-goals">
+            <button type="button" class="btn get-goals">
+                See Bucketlist Items
+              </button>
+            </div> -->
+
+            <!-- SEE GOALS  - Where handlebars renders -->
+            <div id="content" class="content"></div>
+    </body>
+</html>
