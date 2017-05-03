@@ -74,7 +74,7 @@ const onUpdateGoal = function (event) {
     let goalId = $(this).attr('data-id')
     // pass goalID to the API Patch request for item
     api.updateGoal(goalId, data)
-      .done(ui.updateGoalSuccess(goalId), getGoals)
+      .done(ui.updateGoalSuccess, getGoals)
       .catch(ui.updateGoalFailure)
   }
 }

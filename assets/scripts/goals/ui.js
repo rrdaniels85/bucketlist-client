@@ -12,6 +12,7 @@ const createGoalSuccess = (data) => {
 }
 
 const createGoalFailure = () => {
+  $('.createerror').text('An error occurred. You must fill in all fields in order to create a new item.')
 }
 
 const getGoalsSuccess = (data) => {
@@ -54,6 +55,7 @@ const updateGoalSuccess = (data) => {
 }
 
 const updateGoalFailure = () => {
+  $('.updateerror').text('An error occurred. You must fill in all fields in order to update an item.')
 }
 
 module.exports = {
